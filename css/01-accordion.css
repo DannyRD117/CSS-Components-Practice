@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+}
+
+.accordion {
+  width: 700px;
+  margin: 100px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accordion__item {
+  padding: 24px;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+}
+
+.accordion__box {
+  grid-column: 2;
+  display: none;
+}
+.accordion__text {
+  font-size: 18px;
+}
+
+.accordion__title,
+.accordion__number {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.accordion__number {
+  color: #adb5bd;
+}
+
+.accordion__icon {
+  width: 24px;
+  height: 24px;
+  stroke: #087f5b;
+}
+
+.accordion__description {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.accordion__list {
+  list-style-position: inside;
+  color: #868e96;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* VISIBLE STATE */
+
+.accordion__item--visible {
+  border-top: 5px solid #087f5b;
+}
+
+.accordion__item--visible .accordion__box {
+  display: block;
+}
+
+.accordion__item--visible .accordion__number,
+.accordion__item--visible .accordion__title {
+  color: #087f5b;
+}
